@@ -1,6 +1,6 @@
 Package: r2pmml
-Version: 0.23.0
-Date: 2019-06-30
+Version: 0.24.0
+Date: 2020-02-05
 Type: Package
 License: AGPL-3
 Title: Convert R Models to PMML
@@ -15,6 +15,6 @@ RoxygenNote: 6.1.1
 Suggests: caret, e1071, earth, evtree, glmnet, mlbench, partykit,
         randomForest, ranger, xgboost
 SystemRequirements: Java (>= 8.0)
-Packaged: 2019-06-30 09:53:21 UTC; vfed
+Packaged: 2020-02-05 14:46:13 UTC; vfed
 Repository: CRAN
-Date/Publication: 2019-07-01 15:20:04 UTC
+Date/Publication: 2020-02-05 16:30:08 UTC
