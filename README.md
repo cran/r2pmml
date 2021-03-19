@@ -139,11 +139,12 @@ data(iris)
 iris_X = iris[, 1:4]
 iris_y = as.integer(iris[, 5]) - 1
 
-# Generate XGBoost feature map
-iris.fmap = genFMap(iris_X)
+# Generate R model matrix
+iris.matrix = model.matrix(~ . - 1, data = iris_X)
 
-# Generate XGBoost DMatrix
-iris.DMatrix = genDMatrix(iris_y, iris_X)
+# Generate XGBoost DMatrix and feature map based on R model matrix
+iris.DMatrix = xgb.DMatrix(iris.matrix, label = iris_y)
+iris.fmap = as.fmap(iris.matrix)
 
 # Train a model
 iris.xgb = xgboost(data = iris.DMatrix, missing = NULL, objective = "multi:softmax", num_class = 3, nrounds = 13)
@@ -180,12 +181,25 @@ Removing the package:
 remove.packages("r2pmml")
 ```
 
+# Documentation #
+
+Up-to-date:
+
+* [Converting logistic regression models to PMML documents](https://openscoring.io/blog/2020/01/19/converting_logistic_regression_pmml/)
+* [Deploying R language models on Apache Spark ML](https://openscoring.io/blog/2019/02/09/deploying_rlang_model_sparkml/)
+
+Slightly outdated:
+
+* [Converting R to PMML](https://www.slideshare.net/VilluRuusmann/converting-r-to-pmml-82182483)
+
 # License #
 
-R2PMML is dual-licensed under the [GNU Affero General Public License (AGPL) version 3.0](https://www.gnu.org/licenses/agpl-3.0.html), and a commercial license.
+R2PMML is licensed under the terms and conditions of the [GNU Affero General Public License, Version 3.0](https://www.gnu.org/licenses/agpl-3.0.html).
+
+If you would like to use R2PMML in a proprietary software project, then it is possible to enter into a licensing agreement which makes R2PMML available under the terms and conditions of the [BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause) instead.
 
 # Additional information #
 
 R2PMML is developed and maintained by Openscoring Ltd, Estonia.
 
-Interested in using JPMML software in your application? Please contact [info@openscoring.io](mailto:info@openscoring.io)
+Interested in using [Java PMML API](https://github.com/jpmml) software in your company? Please contact [info@openscoring.io](mailto:info@openscoring.io)

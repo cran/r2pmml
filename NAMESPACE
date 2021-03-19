@@ -1,3 +1,4 @@
+importFrom("methods", "is")
 importFrom("stats", "model.frame", "model.matrix", "na.omit", "predict")
 importFrom("utils", "write.table")
 
@@ -10,10 +11,15 @@ S3method("decorate", "randomForest")
 S3method("decorate", "ranger")
 S3method("decorate", "svm.formula")
 S3method("decorate", "train")
+S3method("decorate", "WrappedModel")
 S3method("decorate", "xgb.Booster")
+
+S3method("as.fmap", "data.frame")
+S3method("as.fmap", "matrix")
 
 S3method("verify", "default")
 S3method("verify", "glm")
 S3method("verify", "train")
+S3method("verify", "xgb.Booster")
 
 exportPattern("^[^\\.]")
