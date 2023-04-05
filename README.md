@@ -5,13 +5,12 @@ R package for converting [R](https://www.r-project.org/) models to PMML
 
 # Features #
 
-This library is a thin wrapper around the JPMML-R command-line application.
-
-For a list of supported model and transformation types, please refer to [JPMML-R features](https://github.com/jpmml/jpmml-r#features).
+This library is a thin R wrapper around the [JPMML-R](https://github.com/jpmml/jpmml-r#features) library.
 
 # Prerequisites #
 
 * Java 1.8 or newer. The Java executable must be available on system path.
+* R 3.3, 4.0 or newer.
 
 # Installation #
 
@@ -26,7 +25,7 @@ Alternatively, installing the latest snapshot version from GitHub using the [`de
 ```R
 library("devtools")
 
-install_git("git://github.com/jpmml/r2pmml.git")
+install_github("jpmml/r2pmml")
 ```
 
 # Usage #
@@ -185,7 +184,7 @@ remove.packages("r2pmml")
 
 Up-to-date:
 
-* [Converting logistic regression models to PMML documents](https://openscoring.io/blog/2020/01/19/converting_logistic_regression_pmml/)
+* [Converting logistic regression models to PMML documents](https://openscoring.io/blog/2020/01/19/converting_logistic_regression_pmml/#r)
 * [Deploying R language models on Apache Spark ML](https://openscoring.io/blog/2019/02/09/deploying_rlang_model_sparkml/)
 
 Slightly outdated:
@@ -196,7 +195,7 @@ Slightly outdated:
 
 R2PMML is licensed under the terms and conditions of the [GNU Affero General Public License, Version 3.0](https://www.gnu.org/licenses/agpl-3.0.html).
 
-If you would like to use R2PMML in a proprietary software project, then it is possible to enter into a licensing agreement which makes R2PMML available under the terms and conditions of the [BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause) instead.
+If you would like to use R2PMML in a proprietary software project, then it is possible to enter into a licensing agreement which makes R2PMML available under the terms and conditions of the [BSD 3-Clause License](https://opensource.org/license/bsd-3-clause/) instead.
 
 # Additional information #
 
