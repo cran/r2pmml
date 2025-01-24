@@ -1,4 +1,27 @@
+# 0.30.0 #
+
+* CRAN release.
+
+* Updated Java libraries.
+
+# 0.29.2 #
+
+* Added support for the `pscl::zeroinfl` model type.
+
+* Added support for using the `ifelse` function,
+and `<`, `<=`, `>=` and `>` comparison operators in
+Apollo utility function definitions.
+
+# 0.29.1 #
+
+* Added support for the ASCII representation of RDS data.
+
+* Fixed the version threshold for version standardization
+and/or version downgrade transformations.
+
 # 0.29.0 #
+
+* CRAN release.
 
 * Added support for the version 3 serialization format.
 
@@ -16,6 +39,8 @@
 `statmod::tweedie` families in the `stats::glm` model type.
 
 # 0.28.0 #
+
+* CRAN release.
 
 * Added support for the `apollo` package:
   * Multinomial logit (MNL) discrete choice models.
